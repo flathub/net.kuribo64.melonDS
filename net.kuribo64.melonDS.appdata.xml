@@ -51,6 +51,7 @@
           <li>Initial DSi camera emulation</li>
         </ul>
       </description>
+    </release>
     <release version="0.9" date="2020-09-04"/>
   </releases>
   <updatecontact>nadia@nhp.sh</updatecontact>
