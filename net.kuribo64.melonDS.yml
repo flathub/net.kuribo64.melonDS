@@ -33,9 +33,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/Arisotura/melonDS.git
-        tag: "0.9"
-        commit: 94d12c68b3cc8240d52c4123cf804641fa66b40a
+        tag: "0.9.1"
+        commit: e2de622d5766c0278dd8407600d83e7a9d893f0b
       - type: file
         path: net.kuribo64.melonDS.appdata.xml
-      - type: patch
-        path: 0001-make-OpenGL-renderer-a-build-option.patch
