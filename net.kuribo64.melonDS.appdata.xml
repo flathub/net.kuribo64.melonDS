@@ -41,6 +41,26 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="0.9.3" date="2021-09-01">
+      <description>
+        <ul>
+          <li>Added support for real touchscreens such as on tablets</li>
+          <li>Fixed touchscreen input being broken in some screen layouts</li>
+          <li>Added audio interpolation with multiple times to choose from</li>
+          <li>Added an option for 10-bit audio output and emulation of SOUNDBIAS</li>
+          <li>
+            DSi improvements
+            <ul>
+              <li>Touchscreen calibration is automatically patched on startup</li>
+              <li>Direct boot is now supported for some DSi titles</li>
+              <li>Added a DSi title manager that lets you install DSiWare to the emulated NAND</li>
+            </ul>
+          </li>
+	  <li>A ROM info dialog has been added under System -&gt; ROM Info</li>
+          <li>Various other bug fixes</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.9.2" date="2021-04-27">
       <description>
         <ul>
