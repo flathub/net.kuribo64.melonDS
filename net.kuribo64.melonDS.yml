@@ -24,6 +24,8 @@ modules:
   - name: melonds
     buildsystem: cmake-ninja
     builddir: true
+    config-opts:
+      - -DCMAKE_BUILD_TYPE=Release
     build-options:
       arch:
         aarch64:
