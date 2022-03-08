@@ -1,6 +1,6 @@
 app-id: net.kuribo64.melonDS
 runtime: org.kde.Platform
-runtime-version: '5.15'
+runtime-version: '5.15-21.08'
 sdk: org.kde.Sdk
 command: melonDS
 cleanup:
@@ -34,7 +34,6 @@ modules:
     sources:
       - type: git
         url: https://github.com/Arisotura/melonDS.git
-        tag: "0.9.3"
-        commit: 9514efe4a0a5acfa2a27cc014808d450af653ed2
+        commit: cce9de5ee1f51e906a644922b2ada6644d81287a
       - type: file
         path: net.kuribo64.melonDS.appdata.xml

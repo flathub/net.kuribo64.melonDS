@@ -41,23 +41,47 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="0.9.4" date="2022-03-08">
+      <description>
+        <ul>
+          <li>Redesign of the Input dialog (Rayyan)</li>
+          <li>Use DraStic open-source DS BIOS replacement (Swordfish90, asiekierka)</li>
+          <li>Generate non-bootable firmware replacement (Swordfish90, asiekierka, others)</li>
+          <li>Support for syncing DLDI/DSi SD image to a folder (Arisotura)</li>
+          <li>ARM9 PU (code/data abort) support in interpreter mode (Arisotura)</li>
+          <li>Fix ADPCM decoding bug resulting in potential crackling (Arisotura)</li>
+          <li>Block sound DMA from reading the ARM7 BIOS (Arisotura)</li>
+          <li>Smarter SDL initialization (andrigamerita, Nadia, Arisotura)</li>
+          <li>Properly center the main window on macOS (Nadia)</li>
+          <li>Don't try to render if the emulator is inactive (Nadia)</li>
+          <li>Fix potential issues with DSi title importing (Nadia, Epicpkmn11)</li>
+          <li>Custom path support (Arisotura)</li>
+          <li>Fix nifi socket init on BSD and macOS (Nadia)</li>
+          <li>Add support for zero addresses in AR codes 3xxxxxxx to Axxxxxxx (Arisotura)</li>
+          <li>Lower window refresh rate if running too fast (RSDuck)</li>
+          <li>Wifi power-saving support (RSDuck)</li>
+          <li>Allow swap-screen hotkey to swap between displaying only top screen and only bottom screen (ZackWeinstein)</li>
+          <li>Add RAM search dialog (2jun0)</li>
+          <li>Add power management dialog for setting battery parameters (Rayyan)</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.9.3" date="2021-09-01">
       <description>
+        <p>General improvements</p>
         <ul>
           <li>Added support for real touchscreens such as on tablets</li>
           <li>Fixed touchscreen input being broken in some screen layouts</li>
-          <li>Added audio interpolation with multiple times to choose from</li>
+          <li>Added audio interpolation with multiple types to choose from</li>
           <li>Added an option for 10-bit audio output and emulation of SOUNDBIAS</li>
-          <li>
-            DSi improvements
-            <ul>
-              <li>Touchscreen calibration is automatically patched on startup</li>
-              <li>Direct boot is now supported for some DSi titles</li>
-              <li>Added a DSi title manager that lets you install DSiWare to the emulated NAND</li>
-            </ul>
-          </li>
-	  <li>A ROM info dialog has been added under System -&gt; ROM Info</li>
+          <li>A ROM info dialog has been added under System -&gt; ROM Info</li>
           <li>Various other bug fixes</li>
+        </ul>
+        <p>DSi improvements</p>
+        <ul>
+          <li>Touchscreen calibration is automatically patched on startup</li>
+          <li>Direct boot is now supported for some DSi titles</li>
+          <li>Added a DSi title manager that lets you install DSiWare to the emulated NAND</li>
         </ul>
       </description>
     </release>
