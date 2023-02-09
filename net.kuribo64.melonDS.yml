@@ -28,7 +28,7 @@ modules:
       arch:
         aarch64:
           config-opts:
-            - -DENABLE_OGLRENDERER=OFF
+            - -DENABLE_LTO_RELEASE=OFF
     build-commands:
       - install -D -m644 -t /app/share/appdata/ ../${FLATPAK_ID}.appdata.xml
     sources:
