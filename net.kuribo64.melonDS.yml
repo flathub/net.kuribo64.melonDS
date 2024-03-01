@@ -1,6 +1,6 @@
 app-id: net.kuribo64.melonDS
 runtime: org.kde.Platform
-runtime-version: '5.15-22.08'
+runtime-version: '6.6'
 sdk: org.kde.Sdk
 command: melonDS
 cleanup:
@@ -25,10 +25,8 @@ modules:
     buildsystem: cmake-ninja
     builddir: true
     build-options:
-      arch:
-        aarch64:
-          config-opts:
-            - -DENABLE_LTO_RELEASE=OFF
+      config-opts:
+        - -DUSE_QT6=ON
     build-commands:
       - install -D -m644 -t /app/share/appdata/ ../${FLATPAK_ID}.appdata.xml
     sources:
