@@ -1,6 +1,6 @@
 app-id: net.kuribo64.melonDS
 runtime: org.kde.Platform
-runtime-version: '6.7'
+runtime-version: '6.8'
 sdk: org.kde.Sdk
 command: melonDS
 cleanup:
@@ -15,23 +15,34 @@ finish-args:
   - "--device=all"
   - "--filesystem=home"
 modules:
-  - name: libslirp
-    buildsystem: meson
+  - name: libenet
+    buildsystem: simple
     sources:
       - type: git
-        url: https://gitlab.freedesktop.org/slirp/libslirp.git
-        tag: v4.7.0
+        url: https://github.com/lsalzman/enet.git
+        tag: v1.3.18
+      #- type: file
+        #path: libenet.pc
+    build-commands:
+      - autoreconf -vfi
+      - ./configure --prefix=/app
+      - make -j$(nproc --all) install
   - name: melonds
     buildsystem: cmake-ninja
     builddir: true
     build-options:
       config-opts:
-        - -DUSE_QT6=ON
+        - -DMELONDS_VERSION_SUFFIX= RC
+        - -DMELONDS_EMBED_BUILD_INFO=ON
+        - -DMELONDS_GIT_HASH=e3fa6f4224e0d706df3ee262ae41cfb0deadc593
+        - -DMELONDS_GIT_BRANCH=master
+        - -DMELONDS_BUILD_PROVIDER=Flathub
     build-commands:
       - install -D -m644 -t /app/share/appdata/ ../${FLATPAK_ID}.appdata.xml
     sources:
       - type: git
         url: https://github.com/melonDS-emu/melonDS.git
-        commit: 430de6b2702bb93faa8c2004aff3fbd084db4a1e
+        #commit: e3fa6f4224e0d706df3ee262ae41cfb0deadc593
+        tag: 1.0rc
       - type: file
         path: net.kuribo64.melonDS.appdata.xml
