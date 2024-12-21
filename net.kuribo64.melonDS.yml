@@ -15,6 +15,12 @@ finish-args:
   - "--device=all"
   - "--filesystem=home"
 modules:
+  - name: libenet
+    buildsystem: cmake
+    sources:
+      - type: git
+        url: https://github.com/lsalzman/enet.git
+        tag: v1.3.17
   - name: libslirp
     buildsystem: meson
     sources:
