@@ -32,6 +32,6 @@ modules:
     sources:
       - type: git
         url: https://github.com/melonDS-emu/melonDS.git
-        commit: 430de6b2702bb93faa8c2004aff3fbd084db4a1e
+        commit: e3fa6f4224e0d706df3ee262ae41cfb0deadc593
       - type: file
         path: net.kuribo64.melonDS.appdata.xml
