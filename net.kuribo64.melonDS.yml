@@ -16,11 +16,17 @@ finish-args:
   - "--filesystem=home"
 modules:
   - name: libenet
-    buildsystem: cmake
+    buildsystem: simple
+    builddir: true
     sources:
       - type: git
         url: https://github.com/lsalzman/enet.git
         tag: v1.3.17
+    build-commands:
+      - autoreconf -vfi
+      - ./configure --prefix=/app
+      - make
+      - make install
   - name: libslirp
     buildsystem: meson
     sources:
