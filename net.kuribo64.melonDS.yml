@@ -41,5 +41,7 @@ modules:
         x-data-checker:
           type: git
           tag-pattern: ([\d.]+)
+      - type: patch
+        path: fix-build-gcc14.patch
       - type: file
         path: net.kuribo64.melonDS.appdata.xml
