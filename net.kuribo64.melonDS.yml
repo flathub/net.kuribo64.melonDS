@@ -22,6 +22,9 @@ modules:
         url: https://gitlab.freedesktop.org/slirp/libslirp.git
         tag: v4.8.0
         commit: ce314e39458223c2c42245fe536fbe1bcd94e9b1
+        x-data-checker:
+          type: git
+          tag-pattern: v([\d.]+)
   - name: melonds
     buildsystem: cmake-ninja
     builddir: true
@@ -33,6 +36,10 @@ modules:
     sources:
       - type: git
         url: https://github.com/melonDS-emu/melonDS.git
+        tag: 0.9.5
         commit: 430de6b2702bb93faa8c2004aff3fbd084db4a1e
+        x-data-checker:
+          type: git
+          tag-pattern: ([\d.]+)
       - type: file
         path: net.kuribo64.melonDS.appdata.xml
