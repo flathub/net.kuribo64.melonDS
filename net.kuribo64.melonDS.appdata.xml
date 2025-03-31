@@ -13,7 +13,8 @@
   <content_rating type="oars-1.0" />
   <description>
     <p>
-      melonDS aims at providing fast and accurate Nintendo DS emulation. While it is still a work in progress, it has a pretty solid set of features.
+      melonDS aims at providing fast and accurate Nintendo DS emulation. While it is still a work in
+      progress, it has a pretty solid set of features.
     </p>
     <ul>
       <li>Nearly complete core (CPU, video, audio, ...)</li>
@@ -33,15 +34,18 @@
   <url type="donation">https://www.patreon.com/Arisotura</url>
   <screenshots>
     <screenshot type="default" environment="plasma">
-      <image width="389" height="574" scale="1">https://raw.githubusercontent.com/flathub/net.kuribo64.melonDS/master/screenshots/1.png</image>
+      <image width="389" height="574" scale="1">
+        https://raw.githubusercontent.com/flathub/net.kuribo64.melonDS/master/screenshots/1.png</image>
       <caption>Nintendo DS emulation.</caption>
     </screenshot>
     <screenshot environment="plasma">
-      <image width="389" height="574" scale="1">https://raw.githubusercontent.com/flathub/net.kuribo64.melonDS/master/screenshots/2.png</image>
+      <image width="389" height="574" scale="1">
+        https://raw.githubusercontent.com/flathub/net.kuribo64.melonDS/master/screenshots/2.png</image>
       <caption>Nintendo DSi emulation.</caption>
     </screenshot>
     <screenshot environment="plasma">
-      <image width="901" height="574" scale="1">https://raw.githubusercontent.com/flathub/net.kuribo64.melonDS/master/screenshots/3.png</image>
+      <image width="901" height="574" scale="1">
+        https://raw.githubusercontent.com/flathub/net.kuribo64.melonDS/master/screenshots/3.png</image>
       <caption>High-resolution rendering and screen layouts.</caption>
     </screenshot>
   </screenshots>
@@ -56,6 +60,36 @@
     <control>gamepad</control>
   </supports>
   <releases>
+    <release version="1.0 RC" date="2024-11-20">
+      <description>
+        <ul>
+          <li>add splashscreen (Arisotura)</li>
+          <li>add About dialog (Nadia)</li>
+          <li>emulation fixes for calico (fincs)</li>
+          <li>make the frontend mostly thread-safe</li>
+          <li>refactor core to support multiple instances in one process</li>
+          <li>OpenGL renderer: avoid undefined Z when using W-buffering (Generic)</li>
+          <li>improve microphone input (Arisotura)</li>
+          <li>add support for multiple windows (Arisotura)</li>
+          <li>new configuration system (Arisotura)</li>
+          <li>add OpenGL compute shader renderer (Generic)</li>
+          <li>implement framerate target presets (Jakly)</li>
+          <li>fix microphone blow noise input (Generic)</li>
+          <li>add LAN support (Arisotura)</li>
+          <li>add Nix flake (Nadia)</li>
+          <li>attempts at improving local multiplayer connections (Arisotura)</li>
+          <li>many accuracy improvements to the software 3D renderer (Jakly)</li>
+          <li>fix inaccuracy with NO$GBA debug registers (pants64DS)</li>
+          <li>OpenGL renderer: add support for changing BG0HOFS midframe (Arisotura)</li>
+          <li>fix zstd ROM loading issues (Nadia)</li>
+          <li>audio: add Gaussian (SNES) interpolation (Nadia)</li>
+          <li>fix DSiWare detection (JesseTG)</li>
+          <li>add support for R4 Revolution/M3 Simply carts (asiekierka)</li>
+          <li>fix DS/GBA comm not working when using FreeBIOS (Nadia)</li>
+          <li>probably more</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.9.5" date="2022-11-03">
       <description>
         <ul>
@@ -63,8 +97,10 @@
           <li>DLDI fixes for the Smash demo (Arisotura)</li>
           <li>fix gaps in I/O handling (Arisotura)</li>
           <li>fix invalid savemem commands, fixes Dementium (Arisotura)</li>
-          <li>FreeBIOS: add VRAM-compatible LZ77 decompress function, fixes Yoshi's Island (Arisotura)</li>
-          <li>default firmware: in DSi mode, emulate DWM-W015 wifi board instead of DWM-W024 (Arisotura)</li>
+          <li>FreeBIOS: add VRAM-compatible LZ77 decompress function, fixes Yoshi's Island
+            (Arisotura)</li>
+          <li>default firmware: in DSi mode, emulate DWM-W015 wifi board instead of DWM-W024
+            (Arisotura)</li>
           <li>default firmware: save WFC settings to separate file (Arisotura)</li>
           <li>disable firmware overrides UI when firmware override isn't checked (Nadia)</li>
           <li>2D: more accurate fade/blending (Arisotura)</li>
@@ -112,7 +148,8 @@
           <li>Add support for zero addresses in AR codes 3xxxxxxx to Axxxxxxx (Arisotura)</li>
           <li>Lower window refresh rate if running too fast (RSDuck)</li>
           <li>Wifi power-saving support (RSDuck)</li>
-          <li>Allow swap-screen hotkey to swap between displaying only top screen and only bottom screen (ZackWeinstein)</li>
+          <li>Allow swap-screen hotkey to swap between displaying only top screen and only bottom
+            screen (ZackWeinstein)</li>
           <li>Add RAM search dialog (2jun0)</li>
           <li>Add power management dialog for setting battery parameters (Rayyan)</li>
         </ul>
@@ -159,7 +196,7 @@
         </ul>
       </description>
     </release>
-    <release version="0.9" date="2020-09-04"/>
+    <release version="0.9" date="2020-09-04" />
   </releases>
   <update_contact>nadia@nhp.sh</update_contact>
 </component>
