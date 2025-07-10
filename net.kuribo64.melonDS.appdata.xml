@@ -62,30 +62,6 @@
   <releases>
     <release version="1.0" date="2025-07-08">
       <description>
-        <p>This release fixes several bugs that were found in the 1.0 RC, and adds support for the Motion Pak and Guitar Grip add-ons, as well as some fixes to DSi camera support.</p>
-        <ul>
-          <li>build system and CI fixes (Nadia)</li>
-          <li>DSi title manager: fix handling of title strings (Rayyan)</li>
-          <li>fix gdbstub not activating until the console is reset (ZNixian)</li>
-          <li>improve audio when not running at 60FPS (Jakly)</li>
-          <li>fix a lot of warnings (Nadia)</li>
-          <li>fix framelimiter bugs (Jakly)</li>
-          <li>add support for solar sensor without using Boktai ROM (Jesse)</li>
-          <li>set SDLHINTAPP_NAME (redbluegreenhat)</li>
-          <li>fix undefined behavior when indexing into ARCode::Code (Jesse)</li>
-          <li>DLDI: add support for unaligned I/O in melonDLDI driver (Arisotura)</li>
-          <li>audio settings: fix mic settings not applying when closing the dialog (Arisotura, Nadia)</li>
-          <li>multiplayer: load firmware from correct instance-specific file (Arisotura)</li>
-          <li>3D: small fix to translucency flag assignment (Jakly)</li>
-          <li>AES: load Tad key (edo9300)</li>
-          <li>slot-2: add support for Motion Pak and Guitar Grip (asie)</li>
-          <li>DSP: fix PDATA reads (Arisotura)</li>
-          <li>slot-2: don't return 0 when attempting to read from the GBA GPIO address (edo9300)</li>
-        </ul>
-      </description>
-    </release>
-    <release version="1.0 RC" date="2024-11-21">
-      <description>
         <p>This release brings a major core refactor, faster local multiplayer, LAN support, the new OpenGL compute shader renderer, multi-window support, and more!</p>
         <ul>
           <li>add splashscreen (Arisotura)</li>
@@ -111,7 +87,23 @@
           <li>fix DSiWare detection (JesseTG)</li>
           <li>add support for R4 Revolution/M3 Simply carts (asiekierka)</li>
           <li>fix DS/GBA comm not working when using FreeBIOS (Nadia)</li>
-          <li>probably more</li>
+          <li>build system and CI fixes (Nadia)</li>
+          <li>DSi title manager: fix handling of title strings (Rayyan)</li>
+          <li>fix gdbstub not activating until the console is reset (ZNixian)</li>
+          <li>improve audio when not running at 60FPS (Jakly)</li>
+          <li>fix a lot of warnings (Nadia)</li>
+          <li>fix framelimiter bugs (Jakly)</li>
+          <li>add support for solar sensor without using Boktai ROM (Jesse)</li>
+          <li>set SDLHINTAPP_NAME (redbluegreenhat)</li>
+          <li>fix undefined behavior when indexing into ARCode::Code (Jesse)</li>
+          <li>DLDI: add support for unaligned I/O in melonDLDI driver (Arisotura)</li>
+          <li>audio settings: fix mic settings not applying when closing the dialog (Arisotura, Nadia)</li>
+          <li>multiplayer: load firmware from correct instance-specific file (Arisotura)</li>
+          <li>3D: small fix to translucency flag assignment (Jakly)</li>
+          <li>AES: load Tad key (edo9300)</li>
+          <li>slot-2: add support for Motion Pak and Guitar Grip (asie)</li>
+          <li>DSP: fix PDATA reads (Arisotura)</li>
+          <li>slot-2: don't return 0 when attempting to read from the GBA GPIO address (edo9300)</li>
         </ul>
       </description>
     </release>
