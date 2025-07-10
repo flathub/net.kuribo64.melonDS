@@ -1,6 +1,6 @@
 app-id: net.kuribo64.melonDS
 runtime: org.kde.Platform
-runtime-version: '6.8'
+runtime-version: '6.9'
 sdk: org.kde.Sdk
 command: melonDS
 cleanup:
@@ -21,8 +21,6 @@ modules:
       - type: git
         url: https://github.com/lsalzman/enet.git
         tag: v1.3.18
-      #- type: file
-        #path: libenet.pc
     build-commands:
       - autoreconf -vfi
       - ./configure --prefix=/app
@@ -32,9 +30,8 @@ modules:
     builddir: true
     build-options:
       config-opts:
-        - -DMELONDS_VERSION_SUFFIX= RC
         - -DMELONDS_EMBED_BUILD_INFO=ON
-        - -DMELONDS_GIT_HASH=e3fa6f4224e0d706df3ee262ae41cfb0deadc593
+        - -DMELONDS_GIT_HASH=e099cfdc5a38141135e9d5747bebae8f640978c4
         - -DMELONDS_GIT_BRANCH=master
         - -DMELONDS_BUILD_PROVIDER=Flathub
     build-commands:
@@ -42,7 +39,6 @@ modules:
     sources:
       - type: git
         url: https://github.com/melonDS-emu/melonDS.git
-        #commit: e3fa6f4224e0d706df3ee262ae41cfb0deadc593
-        tag: 1.0rc
+        tag: 1.0
       - type: file
         path: net.kuribo64.melonDS.appdata.xml
