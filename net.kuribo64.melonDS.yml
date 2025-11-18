@@ -1,6 +1,6 @@
 app-id: net.kuribo64.melonDS
 runtime: org.kde.Platform
-runtime-version: '6.9'
+runtime-version: '6.10'
 sdk: org.kde.Sdk
 command: melonDS
 cleanup:
@@ -29,6 +29,13 @@ modules:
         commands:
           - autoreconf -ifv
 
+  - name: faad2
+    buildsystem: cmake-ninja
+    sources:
+      - sha256: 3fcbd305e4abd34768c62050e18ca0986f7d9c5eca343fb98275418013065c0e
+        type: archive
+        url: https://github.com/knik0/faad2/archive/refs/tags/2.11.2.tar.gz
+
   - name: melonds
     buildsystem: cmake-ninja
     builddir: true
@@ -43,6 +50,6 @@ modules:
     sources:
       - type: git
         url: https://github.com/melonDS-emu/melonDS.git
-        tag: 1.0
+        tag: 1.1
       - type: file
         path: net.kuribo64.melonDS.appdata.xml
