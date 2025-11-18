@@ -50,6 +50,6 @@ modules:
     sources:
       - type: git
         url: https://github.com/melonDS-emu/melonDS.git
-        tag: 1.1
+        tag: b86390e4428bf38ce4c1ce0e9ca446d6d25955e8
       - type: file
         path: net.kuribo64.melonDS.appdata.xml
