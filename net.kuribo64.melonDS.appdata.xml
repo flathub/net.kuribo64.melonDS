@@ -32,20 +32,20 @@
   <url type="vcs-browser">https://github.com/melonDS-emu/melonDS</url>
   <url type="donation">https://www.patreon.com/Arisotura</url>
   <screenshots>
-    <screenshot type="default" environment="plasma">
-      <image width="644" height="955" scale="1">https://raw.githubusercontent.com/flathub/net.kuribo64.melonDS/master/screenshots/1.png</image>
+    <screenshot type="default" environment="gnome">
+      <image width="534" height="851" scale="1">https://raw.githubusercontent.com/flathub/net.kuribo64.melonDS/master/screenshots/1.png</image>
       <caption>melonDS splash screen.</caption>
     </screenshot>
-    <screenshot environment="plasma">
-      <image width="644" height="955" scale="1">https://raw.githubusercontent.com/flathub/net.kuribo64.melonDS/master/screenshots/2.png</image>
+    <screenshot environment="gnome">
+      <image width="534" height="851" scale="1">https://raw.githubusercontent.com/flathub/net.kuribo64.melonDS/master/screenshots/2.png</image>
       <caption>Nintendo DS emulation.</caption>
     </screenshot>
-    <screenshot environment="plasma">
-      <image width="644" height="955" scale="1">https://raw.githubusercontent.com/flathub/net.kuribo64.melonDS/master/screenshots/3.png</image>
+    <screenshot environment="gnome">
+      <image width="534" height="851" scale="1">https://raw.githubusercontent.com/flathub/net.kuribo64.melonDS/master/screenshots/3.png</image>
       <caption>Nintendo DSi emulation.</caption>
     </screenshot>
-    <screenshot environment="plasma">
-      <image width="1668" height="955" scale="1">https://raw.githubusercontent.com/flathub/net.kuribo64.melonDS/master/screenshots/4.png</image>
+    <screenshot environment="gnome">
+      <image width="1558" height="851" scale="1">https://raw.githubusercontent.com/flathub/net.kuribo64.melonDS/master/screenshots/4.png</image>
       <caption>High-resolution rendering and screen layouts.</caption>
     </screenshot>
   </screenshots>
@@ -60,6 +60,44 @@
     <control>gamepad</control>
   </supports>
   <releases>
+    <release version="1.1" date="2025-11-17">
+      <description>
+        <p>This release adds DSP HLE, support for importnig cheats, BSD builds, and several other bugfixes.</p>
+        <ul>
+          <li>3D: use 32-bit division in software renderer (Arisotura)</li>
+          <li>fix 8-bit NO$GBA debug register writes (FrankHB)</li>
+          <li>fix save type for Legacy of Ys - Books I and II (CasualPokePlayer)</li>
+          <li>ROM info dialog: make DS banner more accurate (Rayyan)</li>
+          <li>DSi: add DSP HLE (Arisotura)</li>
+          <li>make input system thread-safe (fixes random multiplayer crash) (Arisotura)</li>
+          <li>CI: various vcpkg improvements (Nadia)</li>
+          <li>JIT/x64: ensure writable code memory after alloc (Rayyan)</li>
+          <li>JIT: add support for PaX MPROTECT on NetBSD (Rayyan)</li>
+          <li>JIT: handle W^X codemem in fault handler (Rayyan)</li>
+          <li>SD/MMC: fix crash when accessing port with no device connected (Arisotura)</li>
+          <li>gdb stub: fix reading wrong code for vCont packet (jonko0493)</li>
+          <li>CI: add OpenBSD CI (Izder456)</li>
+          <li>DLDI: fix log2(size) in driver header (Arisotura)</li>
+          <li>camera: fix CAM_MCNT reset behavior (Arisotura)</li>
+          <li>CI: add x64 FreeBSD and NetBSD CI (Rayyan)</li>
+          <li>audio: add high-quality resampling with blip-buf (Nadia)</li>
+          <li>3D: fix UB in software renderer when drawing polygons with linear interpolation and Z-buffering (Arisotura)</li>
+          <li>AR: add extra D400000x data processing opcodes (Arisotura)</li>
+          <li>Qt6: use new way to access the native display/window on X11/Wayland (Nadia)</li>
+          <li>nix: update inputs and add dev shell Qt wrapper workaround (Nadia)</li>
+          <li>DSi: add support for the main RAM size register, with hack to work around loader crash (Arisotura)</li>
+          <li>AR: add support for importing cheats from usrcheat.dat, improve UI (Arisotura)</li>
+          <li>fix UI glitchiness under Wayland when OpenGL is used (Arisotura, thanks PCSX2 team)</li>
+          <li>fix minor Thumb BLX immediate bugs (Jakly)</li>
+          <li>update xxHash to 0.8.3 (JordanTheToaster)</li>
+          <li>reduce frontend audio buffer size to 512, fix audio sync (Nadia)</li>
+          <li>fix bug that could randomly break audio output (Arisotura)</li>
+          <li>compute renderer: implement tile size scaling to alleviate glitches at high resolutions (FireNX70)</li>
+          <li>SPU: fix uninitialized variable causing potential crash (Nadia)</li>
+          <li>add support for building melonDS on Windows without MinGW (Nadia)</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.0" date="2025-07-08">
       <description>
         <p>This release brings a major core refactor, faster local multiplayer, LAN support, the new OpenGL compute shader renderer, multi-window support, and more!</p>
